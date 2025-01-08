@@ -15,25 +15,27 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'solidus_core', ['>= 1.4', '< 3']
+  # Update Solidus dependency to include 3.x
+  s.add_dependency 'solidus_core', '>= 1.4'
   s.add_dependency 'solidus_support'
   s.add_dependency 'deface', '~> 1.0'
   s.add_dependency 'http', '~> 2.0'
 
-  s.add_development_dependency 'capybara', '~> 2.14'
+  # Update development dependencies to more recent versions
+  s.add_development_dependency 'capybara'
   s.add_development_dependency 'capybara-screenshot'
   s.add_development_dependency 'coffee-rails'
-  s.add_development_dependency 'database_cleaner', '~> 1.6'
-  s.add_development_dependency 'factory_bot', '~> 4.4'
+  s.add_development_dependency 'database_cleaner'
+  s.add_development_dependency 'factory_bot_rails'
   s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'poltergeist', '~> 1.5'
-  s.add_development_dependency 'rspec-rails', '~> 3.3'
-  s.add_development_dependency 'rubocop', '0.37.2'
-  s.add_development_dependency 'rubocop-rspec', '1.4.0'
+  s.add_development_dependency 'selenium-webdriver'  # Replace poltergeist
+  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'rubocop-rspec'
   s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'shoulda-matchers', '~> 3.1'
-  s.add_development_dependency 'simplecov', '~> 0.14'
+  s.add_development_dependency 'shoulda-matchers'
+  s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'vcr', '~> 3.0'
-  s.add_development_dependency 'webmock', '~> 2.1'
+  s.add_development_dependency 'vcr'
+  s.add_development_dependency 'webmock'
 end
